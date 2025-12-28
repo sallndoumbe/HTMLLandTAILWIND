@@ -1,11 +1,651 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KLIVIO - Tailwind</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body>
-    <h1>HELLO</h1>
+
+<body class="bg-[#1c2738] text-white">
+
+<header class="flex items-center justify-between px-5 py-6 h-20 border-b border-white/10">
+
+  <div>
+    <img src="./asserts/logo.png" alt="logo" class="w-[60px] h-[25px]" />
+  </div>
+
+  <div class="hidden xl:flex items-center">
+
+    <nav class="mr-10">
+      <a href="#" class="text-sm opacity-80 whitespace-nowrap">
+        Les formations
+      </a>
+    </nav>
+
+    <div class="flex items-center bg-[#273447] border border-white rounded w-[500px] px-2">
+      <input
+        type="text"
+        placeholder="Rechercher"
+        class="bg-transparent flex-1 px-2 py-1 text-sm outline-none placeholder-white/50"
+      />
+      <button class="opacity-70">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="hidden xl:flex gap-3">
+    <button class="px-5 py-2 bg-white text-[#1c2738] font-semibold rounded">
+      Connexion
+    </button>
+    <button class="px-5 py-2 font-semibold rounded bg-gradient-to-r from-[#27e28c] to-[#23b0ff] text-[#1c2738]">
+      Inscription
+    </button>
+  </div>
+
+  <div class="xl:hidden">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPUlEQVR4nO3WsQkAIBRDwew/tLG3EasPcgcZIN1LAIBktf1h+eYIAABcTVerjK+MBwDg1XS1yvjKeADIaQMv36phzr5QiQAAAABJRU5ErkJggg=="
+         alt="menu" />
+  </div>
+</header>
+
+<section class="relative flex items-center justify-center min-h-[400px] text-center overflow-hidden">
+
+  <div
+    class="absolute inset-0 bg-[url('./asserts/bg-header.png')] bg-cover bg-center z-0">
+  </div>
+
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-[#37e98eb3] to-[#1b8ff099] z-10">
+  </div>
+
+  <div class="relative z-20 max-w-3xl px-5">
+    <h1 class="text-4xl font-bold uppercase tracking-tight text-[#152237] mb-2">
+      Klivio, l'allié de votre progression
+    </h1>
+
+    <p class="text-lg text-black opacity-90 mb-8 tracking-wide">
+      LES MEILLEURES FORMATIONS SUR LE DÉVELOPPEMENT PERSONNEL
+
+    </p>
+
+    <a href="#"
+       class="inline-block bg-white text-[#1c2738] px-6 py-3 rounded-md border-2 border-white hover:bg-transparent hover:text-white transition">
+      En savoir plus
+    </a>
+  </div>
+</section>
+
+<section class="bg-white text-[#333] px-20 py-16 text-center">
+
+  <h2 class="text-3xl font-bold mb-10 text-left">
+    Les formations populaires
+  </h2>
+
+  <div class="flex justify-between gap-8 mb-10 flex-col xl:flex-row xl:items-start">
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-[#1c2738] text-white px-3 py-1
+                    text-base font-semibold rounded-tl flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through opacity-60">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Parler en public</h3>
+      <p class="text-sm text-[#555] mb-2">
+        Sonia Lefèvre | Coach prise de parole
+      </p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★★
+      </div>
+
+      <p class="text-sm text-[#777] leading-snug">
+        Gagnez en aisance et captez votre<br> auditoire
+      </p>
+    </div>
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-[#1c2738] text-white px-3 py-1
+                    text-base font-semibold rounded-tl flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through opacity-60">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Gérer le stress</h3>
+      <p class="text-sm text-[#555] mb-2">
+        Lucie Garnier | Formatrice
+      </p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★<span class="opacity-30">★</span>
+      </div>
+
+      <p class="text-sm text-[#777] leading-snug">
+        Apprenez à rester serein face aux<br> défis
+      </p>
+    </div>
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-[#1c2738] text-white px-3 py-1
+                    text-base font-semibold rounded-tl flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through opacity-60">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Travailler en équipe</h3>
+      <p class="text-sm text-[#555] mb-2">
+        David Moreau | Expert
+      </p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★<span class="opacity-30">★</span>
+      </div>
+
+      <p class="text-sm text-[#777] leading-snug">
+        Collaborez efficacement, même à<br> distance
+      </p>
+    </div>
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-[#1c2738] text-white px-3 py-1
+                    text-base font-semibold rounded-tl flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through opacity-60">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Gérer son temps</h3>
+      <p class="text-sm text-[#555] mb-2">
+        Claire Dumas | Coach organisation
+      </p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★☆ 
+      </div>
+
+      <p class="text-sm text-[#777] leading-snug">
+        Optimisez vos journées et gagnez<br> en efficacité
+      </p>
+    </div>
+
+  </div>
+
+  <a href="#"
+     class="inline-block bg-[#1c2738] text-white px-6 py-3 rounded font-semibold
+            uppercase hover:bg-[#3e4b5d] transition">
+    Voir plus de formations
+  </a>
+
+</section>
+
+<section class="bg-[#1c2738] text-white px-20 py-16 text-center">
+
+  <h2 class="text-3xl font-bold mb-10 text-left">
+    Les formations récentes
+  </h2>
+
+  <div class="flex justify-between gap-8 mb-10 flex-col xl:flex-row xl:items-start">
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-white text-[#1c2738]
+                    px-3 py-1 text-base font-semibold rounded-tl
+                    flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through text-[#444]">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Mieux communiquer</h3>
+      <p class="text-sm mb-2">Julien Martel | Coach en comm.</p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★★
+      </div>
+
+      <p class="text-sm leading-snug">
+        Améliorez vos échanges et votre<br> impact relationnel
+      </p>
+    </div>
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-white text-[#1c2738]
+                    px-3 py-1 text-base font-semibold rounded-tl
+                    flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through text-[#444]">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Maîtriser ses émotions</h3>
+      <p class="text-sm mb-2">Amel Benali | Psy du travail</p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★<span class="opacity-30">★</span>
+      </div>
+
+      <p class="text-sm leading-snug">
+        Développez calme et intelligence<br> émotionnelle
+      </p>
+    </div>
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-white text-[#1c2738]
+                    px-3 py-1 text-base font-semibold rounded-tl
+                    flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through text-[#444]">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Résoudre les problèmes</h3>
+      <p class="text-sm mb-2">Thomas Rivière | Expert</p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★<span class="opacity-30">★</span>
+      </div>
+
+      <p class="text-sm leading-snug">
+        Analysez, décidez et trouvez des<br> solutions durables
+      </p>
+    </div>
+
+    <div class="max-w-[280px] w-full text-left">
+
+      <div class="relative h-[180px] bg-[#37e98e] rounded overflow-hidden mb-4">
+        <div class="absolute bottom-0 right-0 bg-white text-[#1c2738]
+                    px-3 py-1 text-base font-semibold rounded-tl
+                    flex items-center gap-2">
+          <span>15,99 €</span>
+          <span class="text-sm line-through text-[#444]">69 €</span>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-1">Leadership positif</h3>
+      <p class="text-sm mb-2">Marc Nguyen | Consultant</p>
+
+      <div class="text-[#FFC700] text-xl mb-2">
+        ★★★★☆
+      </div>
+
+      <p class="text-sm leading-snug">
+        Inspirez, motivez et fédérez votre<br> équipe
+      </p>
+    </div>
+
+  </div>
+
+  <a href="#"
+     class="inline-block bg-white text-[#1c2738] px-6 py-3 rounded
+            font-semibold uppercase border border-white
+            hover:bg-transparent hover:text-white transition">
+    Voir plus de formations
+  </a>
+
+</section>
+
+
+<section class="bg-white text-[#1c2738] px-20 py-10 text-center">
+
+  <h2 class="text-5xl font-bold mb-12 uppercase">
+    Avis clients
+  </h2>
+
+  <div class="flex justify-between gap-24 px-10 flex-col xl:flex-row xl:items-start xl:justify-center">
+
+    <div class="max-w-[400px] flex flex-col items-center text-center px-5">
+
+      <div class="w-[150px] h-[150px] rounded-full mb-5 bg-[#f7a233] overflow-hidden flex items-center justify-center">
+        <img src="./asserts/juliette.png" alt="Juliette"
+             class="w-full h-full object-cover rounded-full" />
+      </div>
+
+      <h3 class="text-3xl font-bold mb-1">
+        Juliette
+      </h3>
+
+      <div class="text-[#f5b000] text-3xl mb-4 tracking-tight">
+        ★★★★★
+      </div>
+
+      <p class="text-sm leading-relaxed text-black/80">
+        J'ai trouvé le parcours très bien structuré : vidéos courtes,
+        quizzes pertinents et projets<br>
+        pratiques qui m'ont permis d'appliquer
+        immédiatement les notions. L'interface est claire<br>
+        et la progression est motivante — parfait pour se former en autonomie.
+      </p>
+    </div>
+
+    <div class="max-w-[400px] flex flex-col items-center text-center px-5">
+
+      <div class="w-[150px] h-[150px] rounded-full mb-5 bg-[#9c6c7d] overflow-hidden flex items-center justify-center">
+        <img src="./asserts/camille.png" alt="Camille"
+             class="w-full h-full object-cover rounded-full" />
+      </div>
+
+      <h3 class="text-3xl font-bold mb-1">
+        Camille
+      </h3>
+
+      <div class="text-[#f5b000] text-3xl mb-4 tracking-tight">
+        ★★★★<span class="opacity-30">★</span>
+      </div>
+
+      <p class="text-sm leading-relaxed text-black/80">
+        Bon équilibre entre théorie et pratique. Les chapitres sont
+        détaillés, et le support et<br>
+        les corrections automatiques ont
+        vraiment aidé. Idéal pour démarrer et progresser<br>
+        rapidement.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="bg-[#F5F5F5] px-20 py-16 flex justify-between items-center gap-12
+                flex-col xl:flex-row">
+
+  <div class="flex-1 max-w-[500px]">
+
+    <h2 class="text-4xl font-bold mb-8 text-[#1c2738] uppercase">
+      Les avantages Klivio
+    </h2>
+
+    <ul class="space-y-4">
+
+      <li class="flex items-center gap-5 text-lg text-[#444]">
+        <img src="asserts/arrow-up-right.svg" alt="" class="w-6 h-6">
+        <span>Suivi de sa progression</span>
+      </li>
+
+      <li class="flex items-center gap-5 text-lg text-[#444]">
+        <img src="asserts/Icon.svg" alt="" class="w-6 h-6">
+        <span>Exercices et QCM pour la mise en pratique</span>
+      </li>
+
+      <li class="flex items-center gap-5 text-lg text-[#444]">
+        <img src="asserts/download-02.svg" alt="" class="w-6 h-6">
+        <span>Possibilité de télécharger / imprimer les formations</span>
+      </li>
+
+      <li class="flex items-center gap-5 text-lg text-[#444]">
+        <img src="asserts/Icon (1).svg" alt="" class="w-6 h-6">
+        <span>Contenu qualitatif et vérifié</span>
+      </li>
+
+      <li class="flex items-center gap-5 text-lg text-[#444]">
+        <img src="asserts/clock-backward.svg" alt="" class="w-6 h-6">
+        <span>Suivi en autonomie, 24h/24, 7j/7</span>
+      </li>
+
+      <li class="flex items-center gap-5 text-lg text-[#444]">
+        <img src="asserts/Icon (2).svg" alt="" class="w-6 h-6">
+        <span>Espaces d'échanges dédiés pour poser ses questions sur les formations</span>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="flex-1 max-w-[600px] w-full">
+    <img src="./asserts/avantages.png"
+         alt="Avantages Klivio"
+         class="w-full h-[400px] object-cover rounded" />
+  </div>
+
+</section>
+
+<section
+  class="bg-[#37e98e] text-[#1c2738] px-20 py-16 flex items-center justify-center gap-12
+         flex-col xl:flex-row">
+
+  <div class="flex-1 w-full xl:max-w-1/2">
+    <img
+      src="./asserts/become-author.png"
+      alt="Devenir formateur"
+      class="w-full h-[500px] object-cover rounded"
+    />
+  </div>
+
+  <div class="flex-1 w-full xl:max-w-1/2 xl:pl-8">
+
+    <h2
+      class="text-4xl font-extrabold uppercase mb-6 leading-tight
+             tracking-tight text-[#1c2738]">
+      Créez vos formations<br>
+      avec Klivio
+    </h2>
+
+    <ul class="space-y-4">
+
+      <li class="flex items-start gap-5 text-xl leading-snug">
+        <img src="asserts/coin-hand.svg" alt="" class="w-7 h-7 shrink-0">
+        <span>Commission unique, au pourcentage sur les ventes</span>
+      </li>
+
+      <li class="flex items-start gap-5 text-xl leading-snug">
+        <img src="asserts/heart.svg" alt="" class="w-7 h-7 shrink-0">
+        <span>Mise en avant sur la plateforme</span>
+      </li>
+
+      <li class="flex items-start gap-5 text-xl leading-snug">
+        <img src="asserts/pencil-01.svg" alt="" class="w-7 h-7 shrink-0">
+        <span>Contrôle total sur le cours : contenu, prix</span>
+      </li>
+
+      <li class="flex items-start gap-5 text-xl leading-snug">
+        <img src="asserts/settings.svg" alt="" class="w-7 h-7 shrink-0">
+        <span>
+          Fonctionnalités avancées : espace commentaires, création de QCM,
+          exercices, vidéos, téléchargement PDF, suivi des ventes,
+          gestion de codes promos, facturation, etc.
+        </span>
+      </li>
+
+      <li class="flex items-start gap-5 text-xl leading-snug">
+        <img src="asserts/user-profile-square.svg" alt="" class="w-7 h-7 shrink-0">
+        <span>
+          Le professeur reste 100 % propriétaire de sa formation et conserve
+          tous ses droits d'auteur
+        </span>
+      </li>
+
+    </ul>
+  </div>
+
+</section>
+
+
+<section
+  class="bg-[#f8f8f8] px-20 py-16 flex justify-between items-center gap-20
+         flex-col xl:flex-row text-[#1c2738]">
+
+  <div class="flex-1 w-full xl:max-w-1/2">
+
+    <h2 class="text-6xl font-bold mb-6">
+      À propos de Klivio
+    </h2>
+
+    <p class="text-2xl leading-relaxed text-[#444] mb-5">
+      Chez Klivio, nous défendons des valeurs fondamentales qui définissent
+      notre approche éducative. Nous nous engageons à assurer une
+      rémunération équitable pour les créateurs de contenu, reconnaissant la
+      qualité de leur travail.
+    </p>
+
+    <p class="text-2xl leading-relaxed text-[#444]">
+      Favorisant l'autonomie d'apprentissage, notre plateforme offre la
+      flexibilité nécessaire pour explorer divers sujets. La transparence
+      est au cœur de notre démarche, garantissant une clarté totale sur les
+      formations que les instructeurs proposent. Ensemble, ces valeurs
+      forment le socle d'une éducation enrichissante et équitable, guidant
+      notre mission d'offrir des opportunités d'apprentissage de qualité.
+    </p>
+
+  </div>
+
+  <div
+    class="flex-1 w-full max-w-[900px] h-[800px] bg-[#06063f]
+           flex items-center justify-center">
+
+    <img
+      src="./asserts/logo.png"
+      alt="Logo Klivio"
+      class="max-w-[400px] h-auto"
+    />
+  </div>
+
+</section>
+
+
+<section class="bg-white px-10 pt-20 text-center text-[#1c2738]">
+
+  <div class="max-w-[900px] mx-auto">
+
+    <h2 class="text-4xl font-extrabold uppercase mb-6 relative inline-block">
+      Nous contacter
+      <span
+        class="block w-[100px] h-[3px] bg-[#37e98e] mx-auto mt-3">
+      </span>
+    </h2>
+
+    <form class="mt-6">
+
+      <div class="flex flex-col md:flex-row gap-5 mb-5">
+        <input
+          type="text"
+          placeholder="Nom"
+          required
+          class="flex-1 h-[60px] bg-[#1c2738] text-white rounded px-5
+                 placeholder-white/70 focus:outline-none"
+        />
+
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          class="flex-1 h-[60px] bg-[#1c2738] text-white rounded px-5
+                 placeholder-white/70 focus:outline-none"
+        />
+      </div>
+
+      <textarea
+        placeholder="Votre message"
+        rows="10"
+        required
+        class="w-full min-h-[250px] bg-[#1c2738] text-white rounded
+               px-5 py-5 mb-8 resize-none
+               placeholder-white/70 focus:outline-none">
+      </textarea>
+
+      <button
+        type="submit"
+        class="bg-[#37e98e] text-black px-6 py-3 font-semibold uppercase rounded
+               hover:bg-[#4ce99e] transition mb-6">
+        Envoyer
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<div class="h-4 bg-[#37e98e]"></div>
+
+<footer class="bg-[#1c2738] text-white text-sm px-10 py-10">
+
+  <div class="flex flex-col lg:flex-row justify-between gap-10 mb-5">
+
+    <div class="flex-1 lg:flex-none relative pl-5">
+      <img src="./asserts/logo.png" alt="logo" class="w-48 h-auto" />
+      <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-[#1b8ff0] rounded-full"></span>
+    </div>
+
+    <div class="flex-1 lg:flex-none">
+      <h3 class="text-base font-semibold uppercase mb-3">Mentions légales</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="opacity-80 hover:opacity-100 hover:text-[#37e98e] transition">CGU</a></li>
+        <li><a href="#" class="opacity-80 hover:opacity-100 hover:text-[#37e98e] transition">CGV</a></li>
+        <li><a href="#" class="opacity-80 hover:opacity-100 hover:text-[#37e98e] transition">FAQ</a></li>
+        <li><a href="#" class="opacity-80 hover:opacity-100 hover:text-[#37e98e] transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="flex-1 lg:flex-none">
+      <h3 class="text-base font-semibold uppercase mb-3">Coordonnées</h3>
+      <p class="flex items-center gap-3 mb-2">
+        <img src="asserts/marker-02.svg" alt="marker" />
+        <span>place république,<br>75003 Paris</span>
+      </p>
+      <p class="flex items-center gap-3 mb-2">
+        <img src="asserts/phone.svg" alt="phone" />
+        <span>01.02.03.04.05</span>
+      </p>
+      <p class="flex items-center gap-3">
+        <img src="asserts/mail-01.svg" alt="mail" />
+        <span>@klivio.fr</span>
+      </p>
+    </div>
+
+    <div class="flex-1 lg:flex-none flex flex-col gap-3 self-start">
+      <button class="bg-white text-[#1c2738] py-2 px-4 rounded font-semibold hover:bg-[#37e98e] transition">
+        Connexion
+      </button>
+      <button class="bg-gradient-to-r from-[#27e28c] to-[#23b0ff] text-[#1c2738] py-2 px-4 rounded font-semibold hover:from-[#37e98e] hover:to-[#1b8ff0] transition">
+        Inscription
+      </button>
+    </div>
+
+  </div>
+
+  <div class="h-0.5 bg-[#37e98e] my-5"></div>
+
+  <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+    <p>&copy; Klivio - 2025</p>
+
+    <div class="flex items-center gap-3">
+      <p class="font-semibold opacity-90 mr-2">Suivez-nous</p>
+      <a href="#" aria-label="Facebook"><img src="asserts/Social Icons.svg" alt="Facebook" class="w-6 h-6" /></a>
+      <a href="#" aria-label="X (Twitter)"><img src="asserts/Social Icons (1).svg" alt="Twitter" class="w-6 h-6" /></a>
+      <a href="#" aria-label="Instagram"><img src="asserts/Social Icons (2).svg" alt="Instagram" class="w-6 h-6" /></a>
+      <a href="#" aria-label="LinkedIn"><img src="asserts/Vector.svg" alt="LinkedIn" class="w-6 h-6" /></a>
+    </div>
+  </div>
+
+</footer>
+
+
 </body>
 </html>
